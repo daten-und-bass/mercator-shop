@@ -14,6 +14,7 @@ import Checkout from '@views/Checkout.vue';
 import About from '@views/About.vue';
 import Imprint from '@views/Imprint.vue';
 import Privacy from '@views/Privacy.vue';
+import NotFound from '@views/NotFound.vue';
 
 Vue.use(Router);
 Vue.use(Meta);
@@ -23,7 +24,8 @@ store.dispatch('loadShopsAll');
 
 export default new Router({
   mode: 'history',
-  base: __dirname,
+  // base: __dirname,
+  base: process.env.BASE_URL,
   routes: [
     /* eslint-disable object-curly-newline */
     { path: '/', redirect: store.getters.shop.locales[0] },
@@ -35,6 +37,7 @@ export default new Router({
     { path: '/:locale/about', name: 'About', component: About },
     { path: '/:locale/imprint', name: 'Imprint', component: Imprint },
     { path: '/:locale/privacy', name: 'Privacy', component: Privacy },
+    { path: '*', component: NotFound },
     /* eslint-enable object-curly-newline */
   ],
   beforeEach(to, from, next) {
