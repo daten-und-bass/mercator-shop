@@ -3,13 +3,13 @@
 const mercator = {
   config () {
     return {
-      base_url: "/stage/mercator-shop/",
+      "base_url": "/stage/mercator-shop/",
     };
   },
   data () {
     return {
-      "_orderTypes": ["information_request", "pickup", "shipping_postal"],
-      "_addressTypes": ["pickup_address", "orderer_address", "shipping_address"],
+      "_order_types": ["information_request", "pickup", "shipping_postal"],
+      "_address_types": ["pickup_address", "orderer_address", "shipping_address"],
       "vat": {
         // ToDo: When which VAT to take (not only dependent on locale)?
         //  => Basic principle: Country of shop is decisive
@@ -79,8 +79,8 @@ const mercator = {
         },
         "payments": ["Prepayment", "Cash", "OnAccount"],
         "logo_link": "https://meister-max.de/images/logo.png",
-        first_name: 'Peter',
-        last_name: 'Max',
+        "first_name": 'Peter',
+        "last_name": 'Max',
         "street": "Müllerweg",
         "number": "2",
         "address_extra_line": "Im Hinterhof",
@@ -101,7 +101,7 @@ const mercator = {
           {"_id": 4, "title": {"en": "Espresso Maker Mokka", "de": "Espressokocher Mokka"}, "price": 20.99, "inventory": true, src: [`${mercator.config().base_url}Bialetti.jpg`], "vat": {"de": 0}, categories: ["home", "hot beverages", "coffee machines", "coffee"], "description": {"en": "Anglia, Anglia ...Ut euismod ornare ante, sed placerat massa sodales eleifend. Etiam a elementum leo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse pulvinar turpis sapien, eu tincidunt ligula suscipit vel. Etiam tristique lorem.", "de": "Germania, Germania ...Ut euismod ornare ante, sed placerat massa sodales eleifend. Etiam a elementum leo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse pulvinar turpis sapien, eu tincidunt ligula suscipit vel. Etiam tristique lorem."}},
           {"_id": 5, "title": {"en": "Onko Coffee - Gold", "de": "Onko Kaffe - Gold"}, "price": 4.99, "inventory": true, src: [`${mercator.config().base_url}onko.jpg`], "vat": {"de": 1}, categories: ["food&drinks", "coffee", "coffee beans"], "description": {"en": "Anglia, Anglia ...Fusce fringilla nec ex ut.", "de": "Germania, Germania ...Fusce fringilla nec ex ut."}}
         ],
-        categories: {
+        "categories": {
           "electronics": { "en": "electronics", "de": "Elektronik"},
           "tablet": { "en": "tablet", "de": "Tablet"},
           "music": { "en": "music", "de": "Musik"},
