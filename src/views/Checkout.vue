@@ -17,7 +17,7 @@
                 :rules="requiredRules"
                 row
                 :value="orderType"
-                :label="$t(`checkout['order type']`) | capitalizeFirstLetter"
+                :label="$tc(`checkout['order type']`, 1) | capitalizeFirstLetter"
               >
                 <v-radio
                   v-for="(value, key) in shopDeliveryTypesAll"
@@ -69,7 +69,7 @@
               wrap
             >
               <v-flex xs24 sm12>
-                <h3 class="primary--text mercator-title-case">{{ $t(`checkout['order type']`) }}: {{ $tc('config.information_request', 1) }}</h3>
+                <h3 class="primary--text mercator-title-case">{{ $tc(`checkout['order type']`, 1) }}: {{ $tc('config.information_request', 1) }}</h3>
               </v-flex>
               <v-flex xs24 sm12>
                 <h4 class="mercator-title-case">{{ $tc(`checkout['your request']`, orderProductsAll.length === 1 ? 1 : 2) }}</h4>
