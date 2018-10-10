@@ -30,7 +30,11 @@ const mercator = {
         },
         "delivery": {
           "information_request": {
-            "type": "information_request"
+            "type": "information_request",
+            "description": {
+              "en": "A description for a request on product information without obligation.",
+              "de": "Eine Beschreibung für eine unverbindliche Anfrage von Produktinformationen."
+            },
             "payment_methods": []
           },
           "pickup": {
@@ -78,6 +82,14 @@ const mercator = {
             }],
             "methods": [{
               "type": "standard",
+              "name": {
+                "en": "Standard",
+                "de": "Standard"
+              },
+              "description":{
+                "en": "Standard shipping via DHL.",
+                "de": "Standardversand mit DHL."              
+              },
               "fees": 6,
               "free": {
                 "money_based": 100.00,
@@ -86,6 +98,14 @@ const mercator = {
               },
             }, {
               "type": "express",
+              "name": {
+                "en": "Express",
+                "de": "Express"
+              },
+              "description":{
+                "en": "Express shipping via DHL.",
+                "de": "Expressversand mit DHL."           
+              },
               "fees": 15,
               "free": {
                 "money_based": 200.00,
