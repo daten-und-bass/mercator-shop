@@ -9,6 +9,7 @@ const getters = {
   shopsAll: state => state.all,
   shop: state => state.all[0],
   shopDeliveryTypesAll: (state, getters) => getters.shop.delivery,
+  shopPaymentTypesAll: (state, getters) => getters.shop.payment,
   vatRatesAllByCountry: () => locale => window.__mercator_data__.vat[locale],
 };
 

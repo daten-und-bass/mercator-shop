@@ -1,7 +1,7 @@
 <template>
   <v-layout row>
+    <checkout-payment></checkout-payment>
     <v-radio-group
-      row
       :required="orderType === 'shipping_postal'"
       :rules="orderType === 'shipping_postal' ? requiredRules : []"
       :value="shippingPostal['method']"
@@ -24,7 +24,12 @@ import { mapGetters } from 'vuex';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { validationRules } from '@components/utils';
 
+const CheckoutPayment = () => import('@components/CheckoutPayment');
+
 export default {
+  components: {
+    CheckoutPayment,
+  },
   data() {
     return {
       ...validationRules,

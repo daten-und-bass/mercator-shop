@@ -18,6 +18,7 @@ const address = () => ({
 
 const state = {
   _type: null,
+  _payment: null,
   details: {
     information_request: {
       _type: 'information_request',
@@ -43,6 +44,7 @@ const state = {
 const getters = {
   order: state => state,
   orderType: state => state._type,
+  orderPayment: state => state._payment,
   orderTypeOfInformatioRequest: state => state.details.information_request,
   orderTypeOfPickup: state => state.details.pickup,
   orderTypeOfShippingPostal: state => state.details.shipping_postal,

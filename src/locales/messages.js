@@ -56,6 +56,7 @@ const messages = {
       'shipping address': 'shipping address',
       'billing address': 'billing address',
       'shipping address is billing address': 'shipping address is billing address',
+      'payment method': 'no payment method | payment method | payment methods',
     },
     about: {
       about: 'about',
@@ -124,6 +125,7 @@ const messages = {
       'shipping address': 'Lieferadresse',
       'billing address': 'Rechnungsadresse',
       'shipping address is billing address': 'Lieferadresse ist Rechnungsadresse',
+      'payment method': 'keine Zahlungsart | Zahlungsart| Zahlungsarten',
     },
     about: {
       about: 'über',

@@ -1,7 +1,7 @@
 <template>
-  <v-layout row>
+  <v-layout>
+    <checkout-payment></checkout-payment>
     <v-radio-group
-      row
       :required="orderType === 'pickup'"
       :rules="orderType === 'pickup' ? idFieldRules : []"
       :value="pickup['pickup_address']"
@@ -41,7 +41,12 @@ import { mapGetters } from 'vuex';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { validationRules } from '@components/utils';
 
+const CheckoutPayment = () => import('@components/CheckoutPayment');
+
 export default {
+  components: {
+    CheckoutPayment,
+  },
   data() {
     return {
       ...validationRules,

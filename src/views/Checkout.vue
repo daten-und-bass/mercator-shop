@@ -24,7 +24,7 @@
                   :key="key"
                   :label="$t(`config.${key}`)| capitalizeFirstLetter"
                   :value="key"
-                  @change="setObject(order, '_type', $event)"
+                  @change="setObject(order, '_type', $event), setObject(order, '_payment', null)"
                 ></v-radio>
               </v-radio-group>
               <CheckoutInformationRequest v-show="orderType === 'information_request'"></CheckoutInformationRequest>

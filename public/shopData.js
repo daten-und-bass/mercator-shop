@@ -31,9 +31,20 @@ const mercator = {
         "delivery": {
           "information_request": {
             "type": "information_request"
+            "payment_methods": []
           },
           "pickup": {
             "type": "pickup",
+            "payment_methods": [{
+              "payment_method": "prepayment",
+              "customer_type": "all"
+            }, {
+              "payment_method": "cash",
+              "customer_type": "all"
+            }, {
+              "payment_method": "on_account",
+              "customer_type": "existing_only"
+            }],
             "addresses": [{
               "_id": 0,
               "street": "Müllerweg",
@@ -58,6 +69,13 @@ const mercator = {
           },
           "shipping_postal": {
             "type": "shipping_postal",
+            "payment_methods": [{
+              "payment_method": "prepayment",
+              "customer_type": "all"
+            }, {
+              "payment_method": "on_account",
+              "customer_type": "existing_only"
+            }],
             "methods": [{
               "type": "standard",
               "fees": 6,
@@ -77,7 +95,41 @@ const mercator = {
             }]
           }
         },
-        "payments": ["Prepayment", "Cash", "OnAccount"],
+        "payment": {
+          "prepayment": {
+            "type": "prepayment",
+            "name": {
+              "en": "Prepayment",
+              "de": "Vorkasse"
+            },
+            "description": {
+              "en": "Payment in advance via bank transfer.",
+              "de": "Zahlung vorab per Banküberweisung."
+            }
+          }, 
+          "cash": {
+            "type": "cash",
+            "name": {
+              "en": "Cash",
+              "de": "Bar"
+            },
+            "description": {
+              "en": "Payment in cash at pickup on-site.",
+              "de": "Zahlung in bar bei Abholung vor Ort."
+            }
+          }, 
+          "on_account": {
+            "type": "on_account",
+            "name": {
+              "en": "On Account",
+              "de": "Rechnung"
+            },
+            "description": {
+              "en": "Payment afterwards via bank transfer.",
+              "de": "Zahlung im Nachhinein per Banküberweisung."
+            },
+          }
+        },
         "logo_link": "https://meister-max.de/images/logo.png",
         "first_name": 'Peter',
         "last_name": 'Max',
