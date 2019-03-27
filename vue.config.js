@@ -15,7 +15,8 @@ module.exports = {
     // host: '0.0.0.0',
     // port: 8080,
     // hot: true,
-    public: `${process.env.MERCATOR_WEB_DEV_SERVER_PUBLIC_DOMAIN}:${process.env.MERCATOR_WEB_DEV_SERVER_PUBLIC_PORT}`,
+    // public: `${process.env.MERCATOR_WEB_DEV_SERVER_PUBLIC_DOMAIN}:${process.env.MERCATOR_WEB_DEV_SERVER_PUBLIC_PORT}`,
+    public: `192.168.99.101:8080`,    
     watchOptions: {
       ignored: /node_modules/,
       aggregateTimeout: 0,
